@@ -860,6 +860,7 @@ GameObject:
   - component: {fileID: 1381647442}
   - component: {fileID: 1381647441}
   - component: {fileID: 1381647440}
+  - component: {fileID: 1381647443}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -925,13 +926,27 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381647439}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1381647443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381647439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5da2795bb9f75145805c93f50d4307c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1709504300}
+  SelfTransform: {fileID: 1381647442}
 --- !u!1 &1709504297
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +958,8 @@ GameObject:
   - component: {fileID: 1709504300}
   - component: {fileID: 1709504299}
   - component: {fileID: 1709504298}
+  - component: {fileID: 1709504301}
+  - component: {fileID: 1709504302}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -1057,8 +1074,36 @@ Transform:
   m_LocalScale: {x: 0.226577, y: 0.18641461, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1709504301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709504297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f700163070aa3341b664d308d4fbebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelfTransform: {fileID: 1709504300}
+  Map: {fileID: 580510245}
+  GroundTile: {fileID: 11400000, guid: 404e3100fac23e347957f51a123907aa, type: 2}
+--- !u!114 &1709504302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709504297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7439e7512d7f5fa48835404b1178506e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Car: {fileID: 1709504301}
 --- !u!1 &1989288308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,5 +1146,5 @@ Transform:
   m_Children:
   - {fileID: 580510243}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
