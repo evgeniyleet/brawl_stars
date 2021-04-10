@@ -7,11 +7,15 @@ public class CarMover : MonoBehaviour
     public Transform SelfTransform;
     public Tilemap Map;
     public TileBase GroundTile;
+    public float Speed;
 
     private Vector3 _force;
     private bool _isAccelerated;
 
-
+    public float GetForce()
+    {
+        return _force.magnitude;
+    }
     public void Accelerate()
     {
         _force += (SelfTransform.up * Time.deltaTime) * 0.05f;
@@ -25,12 +29,12 @@ public class CarMover : MonoBehaviour
 
     public void RotateRight()
     {
-        SelfTransform.Rotate(0, 0, -2);
+        SelfTransform.Rotate(0, 0, -1);
     }
 
     public void RotateLeft()
     {
-        SelfTransform.Rotate(0, 0, 2);
+        SelfTransform.Rotate(0, 0, 1);
     }
 
     void LateUpdate()
@@ -47,10 +51,7 @@ public class CarMover : MonoBehaviour
              _force *= 0.9f;
         }
         
-        SelfTransform.position += _force;
-        
-
-        SelfTransform.position += _force;
+        SelfTransform.position += _force * Speed * Time.deltaTime;
         _isAccelerated = false;
     }
 }
