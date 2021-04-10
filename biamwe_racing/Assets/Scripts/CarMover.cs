@@ -43,14 +43,6 @@ public class CarMover : MonoBehaviour
         {
             _force = Vector3.Lerp(_force, Vector3.zero, Time.deltaTime);
         }
-
-        //if (GroundTile == Map.GetTile(new Vector3Int((int)SelfTransform.position.x,
-        //    (int)SelfTransform.position.y - 1,
-        //    (int)SelfTransform.position.z + 1)))
-        //{
-        //    Debug.Log("aaa"); 
-        //    _force *= 0.9f;
-        //}
         
         SelfTransform.position += _force * Speed * Time.deltaTime;
         _isAccelerated = false;
