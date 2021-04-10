@@ -36,7 +36,7 @@ public class AiControl : MonoBehaviour
             Car.Accelerate();
         }
         Debug.Log(Vector3.Distance(SelfTransform.position, current.position));
-        if (Vector3.Distance(SelfTransform.position, current.position) < 2.9f)
+        if (Vector3.Distance(SelfTransform.position, current.position) < 4.2f)
         {
             _currentPoint++;
             if (_currentPoint > Waypoints.Length)
